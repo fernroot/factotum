@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "factotum"
+version = "0.1.0"
+description = "Game event management project"
+authors = ["fernroot <arnaldojaws@gmail.com>"]
+license = "BSD 3-Clause License"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+django = "~5.0.6"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+poethepoet = "^0.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+black = "black ."
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+skip_magic_trailing_comma = true
